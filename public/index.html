@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container" id="loginContainer">
+            <h1>Real-time Chat</h1>
+            <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="20">
+            <button onclick="joinChat()">Join Chat</button>
+        </div>
+
+        <div class="chat-container" id="chatContainer" style="display: none;">
+            <div class="chat-header">
+                <h2>Chat Room</h2>
+                <div class="user-info">
+                    <span id="currentUser"></span>
+                    <button onclick="leaveChat()">Leave</button>
+                </div>
+            </div>
+
+            <div class="chat-sidebar">
+                <h3>Online Users</h3>
+                <ul id="usersList"></ul>
+            </div>
+
+            <div class="chat-main">
+                <div class="messages" id="messages"></div>
+                <div class="message-input">
+                    <input type="text" id="messageInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/script.js"></script>
+</body>
+</html>

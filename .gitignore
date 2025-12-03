@@ -1,0 +1,25 @@
+# Binaries
+/bin
+/dist
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test Output
+*.out
+
+# Go specific
+vendor/
+
+# Environment files
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+
+# Docker
+.dockerignore
